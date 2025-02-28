@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeJourney - Women Safety Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <div class="logo">SafeJourney</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#portals">Portals</a>
+                <a href="#testimonials">Safety Stories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="login-btn" onclick="openModal()">Sign In</button>
+        </nav>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Safety Matters</h1>
+        <p>SafeJourney helps women stay connected with their guardians and provides real-time safety information for a secure travel experience.</p>
+        <div class="cta-buttons">
+            <button class="cta-btn primary-btn" onclick="openModal()">Create Account</button>
+            <button class="cta-btn secondary-btn">Learn More</button>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-title">
+            <h2>Key Features</h2>
+            <p>SafeJourney provides a comprehensive set of tools to ensure your safety during travel.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Live Location Sharing</h3>
+                <p>Share your real-time location with trusted guardians and family members, even when your phone battery is low.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Connected Profiles</h3>
+                <p>Link your account with your parents or guardians for seamless location sharing and emergency alerts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚗</div>
+                <h3>Ride Integration</h3>
+                <p>Connect with ride-hailing services like Uber, Ola, and Rapido directly from our platform for safer travels.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Safety Stories</h3>
+                <p>Share and read experiences about specific locations to make informed decisions about your travel routes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Emergency Alerts</h3>
+                <p>Send instant alerts to your emergency contacts with just one tap in concerning situations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Offline Support</h3>
+                <p>Last known location is automatically shared with your guardians if your phone gets switched off.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portals Section -->
+    <section class="portals" id="portals">
+        <div class="section-title">
+            <h2>User Portals</h2>
+            <p>SafeJourney offers specialized access for different user roles.</p>
+        </div>
+        <div class="portal-grid">
+            <div class="portal-card">
+                <div class="portal-img" style="background-image: url('/api/placeholder/400/200')"></div>
+                <div class="portal-content">
+                    <h3>User Portal</h3>
+                    <p>Access your personal dashboard to manage safety features, track journeys, and connect with trusted contacts.</p>
+                    <a href="#" class="portal-btn">Access Portal</a>
+                </div>
+            </div>
+            <div class="portal-card">
+                <div class="portal-img" style="background-image: url('/api/placeholder/400/200')"></div>
+                <div class="portal-content">
+                    <h3>Guardian Portal</h3>
+                    <p>Monitor your loved ones' location, receive alerts, and stay connected through our dedicated guardian interface.</p>
+                    <a href="#" class="portal-btn">Access Portal</a>
+                </div>
+            </div>
+            <div class="portal-card">
+                <div class="portal-img" style="background-image: url('/api/placeholder/400/200')"></div>
+                <div class="portal-content">
+                    <h3>Driver Portal</h3>
+                    <p>Connect your transportation service with our platform to provide safer rides to women travelers.</p>
+                    <a href="#" class="portal-btn">Access Portal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Safety Stories</h2>
+            <p>Read about other users' experiences at different locations.</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-location">City Park, Downtown</div>
+                <div class="safety-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <p>I regularly jog in this park during early mornings. It's well-lit and usually has security guards patrolling the area. I feel quite safe here but always stay on the main paths.</p>
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <div class="user-name">Priya S.</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-location">Central Metro Station</div>
+                <div class="safety-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <p>The station is crowded during peak hours which can be uncomfortable. The women's compartment feels safer. I would recommend using this station before 9 PM as it gets deserted later.</p>
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <div class="user-name">Meera R.</div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-location">Tech Hub Office Area</div>
+                <div class="safety-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p>I work late shifts and the office area is very safe. There's 24/7 security, well-lit streets, and frequent patrol cars. Many companies also provide safe drop services for women employees.</p>
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <div class="user-name">Anika J.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Join SafeJourney Today</h2>
+            <p>Create an account and invite your guardians to stay connected and ensure your safety during all your journeys.</p>
+            <button class="cta-btn" onclick="openModal()">Sign Up Now</button>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">SafeJourney</div>
+                <p>A comprehensive platform dedicated to ensuring women's safety through connected technologies and community support.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="#">Location Sharing</a></li>
+                    <li><a href="#">Safety Stories</a></li>
+                    <li><a href="#">Ride Integration</a></li>
+                    <li><a href="#">Emergency Alerts</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Safety Tips</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Emergency Contacts</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SafeJourney. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Sign In/Sign Up Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('login')">Sign In</div>
+                    <div class="tab" onclick="switchTab('register')">Register</div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="tab-content active" id="login">
+                    <form>
+                        <div class="form-group">
+                            <label for="login-phone">Phone Number</label>
+                            <input type="tel" id="login-phone" class="form-control" placeholder="Enter your registered phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="form-submit">Sign In</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Forgot password? <a href="#">Reset here</a></p>
+                    </div>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="tab-content" id="register">
+                    <form>
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-role">Register as</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="user-role" value="user" checked> User
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="user-role" value="guardian"> Guardian
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="user-role" value="driver"> Driver
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Create Password</label>
+                            <input type="password" id="register-password" class="form-control" placeholder="Create a strong password" required>
+                        </div>
+                        <div class="form-group" id="guardian-connect" style="display: none;">
+                            <label for="connect-phone">Connect with User (Phone Number)</label>
+                            <input type="tel" id="connect-phone" class="form-control" placeholder="Enter your ward's phone number">
+                        </div>
+                        <button type="submit" class="form-submit">Create Account</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>

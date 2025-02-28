@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeJourney - Login & Registration</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo-container">
+        <a href="index.html" class="logo">SafeJourney</a>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <div class="auth-container">
+            <!-- Left Side - Image and Features -->
+            <div class="auth-image">
+                <h2>Safety First, Always</h2>
+                <p>Join SafeJourney and connect with your loved ones for a safer travel experience.</p>
+                
+                <ul class="feature-list">
+                    <li>Real-time location sharing with trusted guardians</li>
+                    <li>Emergency alerts with just one tap</li>
+                    <li>Last known location sharing if phone is switched off</li>
+                    <li>Connect with trusted ride services</li>
+                    <li>Access community safety stories for informed decisions</li>
+                </ul>
+            </div>
+            
+            <!-- Right Side - Auth Forms -->
+            <div class="auth-form">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('login')">Login</div>
+                    <div class="tab" onclick="switchTab('register')">Register</div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="tab-content active" id="login">
+                    <h3 class="form-title">Welcome Back!</h3>
+                    
+                    <div class="alert alert-danger" id="login-error">
+                        Invalid phone number or password. Please try again.
+                    </div>
+                    
+                    <form id="login-form" onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="login-phone">Phone Number</label>
+                            <input type="tel" id="login-phone" class="form-control" placeholder="Enter your registered mobile number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me on this device</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        
+                        <div class="divider">or</div>
+                        
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn">
+                                <span class="social-icon">G</span> Google
+                            </button>
+                            <button type="button" class="social-btn">
+                                <span class="social-icon">f</span> Facebook
+                            </button>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p>Forgot your password? <a href="#" onclick="switchTab('verify')">Reset here</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="tab-content" id="register">
+                    <h3 class="form-title">Create Your Account</h3>
+                    
+                    <div class="alert alert-success" id="register-success">
+                        Registration successful! Verification code has been sent to your phone.
+                    </div>
+                    
+                    <form id="register-form" onsubmit="handleRegister(event)">
+                        <div class="form-group">
+                            <label for="register-fullname">Full Name</label>
+                            <input type="text" id="register-fullname" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" class="form-control" placeholder="Enter your mobile number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Select Your Role</label>
+                            <div class="roles">
+                                <div class="role-card active" onclick="selectRole('user', this)">
+                                    <div class="role-icon">👤</div>
+                                    <div class="role-title">User</div>
+                                    <div class="role-desc">Register as a primary user and share your location</div>
+                                </div>
+                                
+                                <div class="role-card" onclick="selectRole('guardian', this)">
+                                    <div class="role-icon">👪</div>
+                                    <div class="role-title">Guardian</div>
+                                    <div class="role-desc">Monitor and receive alerts from your loved ones</div>
+                                </div>
+                                
+                                <div class="role-card" onclick="selectRole('driver', this)">
+                                    <div class="role-icon">🚗</div>
+                                    <div class="role-title">Driver</div>
+                                    <div class="role-desc">Connect your transportation service</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Guardian specific form -->
+                        <div class="guardian-form" id="guardian-form">
+                            <div class="form-group">
+                                <label for="ward-phone">Connect with User</label>
+                                <input type="tel" id="ward-phone" class="form-control" placeholder="Enter user's phone number to connect">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="relationship">Relationship with User</label>
+                                <select id="relationship" class="form-control">
+                                    <option value="">Select relationship</option>
+                                    <option value="parent">Parent</option>
+                                    <option value="spouse">Spouse</option>
+                                    <option value="sibling">Sibling</option>
+                                    <option value="friend">Friend</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-password">Create Password</label>
+                            <input type="password" id="register-password" class="form-control" placeholder="Create a strong password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                </div>
+                
+                <!-- Verification Form -->
+                <div class="tab-content" id="verify">
+                    <div class="verification-content">
+                        <div class="verification-icon">📱</div>
+                        <h3 class="form-title">Verify Your Number</h3>
+                        <p>We've sent a 4-digit verification code to your phone. Please enter it below.</p>
+                        
+                        <form id="verification-form" onsubmit="handleVerification(event)">
+                            <div class="otp-group">
+                                <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                                <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                                <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                                <input type="text" class="otp-input" maxlength="1" pattern="[0-9]" required>
+                            </div>
+                            
+                            <p>Didn't receive the code? <a href="#">Resend Code</a></p>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Verify & Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SafeJourney. All rights reserved.</p>
+    </footer>
+    
+    <script src="signup.js">
+       
+    </script>
+</body>
+</html>
